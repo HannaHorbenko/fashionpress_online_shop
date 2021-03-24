@@ -1,0 +1,129 @@
+.slide {
+    background: url('../img/slider/slide-bg.jpg') center no-repeat;
+    height: 745px;
+    font-family: $title-ff;
+    color: #fff;
+    position: relative;
+    padding: 35px 55px 80px 55px;
+    &__content {
+        padding: 150px 0;
+        width: 38%;
+    }
+    &__content--lg {
+        border-radius: 50%;
+        background-color: #eee;
+        height: 610px;
+        width: 610px;
+    }
+    &__content--sm {
+        height: 185px;
+        width: 185px;
+        padding: 40px;
+        text-align: center;
+        border-radius: 50%;
+        background: url('../img/slider/bg-sm.jpg') top no-repeat;
+    }
+}
+
+.content {
+    position: relative;
+    overflow: hidden;
+    &__title {
+        font-size: 5.2rem;
+        font-weight: 300;
+        margin: 0;
+        line-height: 1;
+        float: left;
+    }
+    &__subtitle {
+        font-size: 1.7rem;
+        font-weight: 300;
+
+    }
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+    }
+    &--pos {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+    &__info {
+        font-size: 3.2rem;
+        margin: 0;
+    }
+
+}
+
+.slider__arrow {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .2);
+    outline: none;
+    border: none;
+    position: absolute;
+    z-index: 10;
+    &:hover,
+    &:focus {
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+    }
+    &--prev {
+        top: 50%;
+        left: 2%;
+    }
+    &--next {
+        top: 50%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .slide__content {
+        position: absolute;
+        padding: 50px 0;
+        bottom: 0;
+        z-index: 10;
+        text-shadow: 1px 1px 2px black, 0 0 1em red;
+        }
+    .slide__content--lg {
+        position: absolute;
+        left: 25%;
+        top: 10%;
+        z-index: 9;
+    }
+    .slide__content--sm {
+        padding: 40px;
+        margin: 25px;
+    }      
+}
+
+@media screen and (max-width: 768px) {
+    .slide {
+        height: 500px;
+    }
+    .slide__content--lg {
+        height: 450px;
+        width: 450px;
+    }
+    .slide__content--sm {
+        padding: 40px;
+        margin: 25px;
+    }      
+}
+
+@media screen and (max-width: 576px) {
+    .slide__content--lg {
+        height: 400px;
+        width: 400px;
+    }
+    .slide__content--sm {
+        padding: 40px;
+        margin: 15px;
+    }      
+}
+

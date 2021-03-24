@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #eeeeee;
+    font: 300 1.4rem $main-ff;
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container--lg {
+    max-width: 1150px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+

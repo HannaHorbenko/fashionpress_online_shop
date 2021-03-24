@@ -1,0 +1,96 @@
+.aside {
+    width: 265px;
+    float: left;
+    margin-right: 10px;
+    &__menu {
+        border-right: 1px solid #bebebe;
+    }
+    &__delivery {
+        text-align: center;
+        padding: 15px;
+    }
+    &__news {
+        margin: 30px 0;
+    }
+
+}
+
+.title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: $main-color;
+    margin: 10px 0 0 0;
+    padding: 10px 10px 10px 20px;
+    text-transform: uppercase;
+}
+
+.menu {
+    list-style-image: url('../img/aside/style.png');
+    padding-left: 30px;
+    &__item {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 12px 12px 12px 5px;
+        border-bottom: 1px solid #bebebe;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #fff;
+            border-right: 4px solid $main-color;
+        }
+    }
+}
+
+.news {
+    color: $third-color;
+    &__title {
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: $main-color;
+    }
+    &__comment {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.3rem;
+        padding-left: 50px;
+        background: url('../img/aside/Twitter.png') left no-repeat;
+    }
+}
+
+.comment {
+    &__name,
+    &__post {
+        color: $main-color;
+    }
+}
+
+.feedback {
+    &__title {
+        font-weight: 500;
+        color: $main-color;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    &__area {
+        position: relative;
+        font-style: italic;
+        font-size: 1.3rem;
+        color: $third-color;
+        margin: 25px 20px 10px 20px;
+    }
+    &__text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 25px 20px 10px 20px;
+    }
+    &__user {
+        font-weight: 500;
+        font-size: 1.3rem;
+        background: url('../img/aside/user.png') left no-repeat;
+        padding: 10px 10px 10px 50px;
+        color: $sec-color;
+        margin: 10px;
+    }
+}
