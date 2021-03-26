@@ -138,8 +138,26 @@
 
 .header__bottom {
     background-color: #000;
+    position: relative;
+
 
 }
+
+.overlay {
+    display: none;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $main-color;
+    }
+}
+
 .menu {
     &__list {
         display: flex;
@@ -165,13 +183,50 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .overlay {
+        display: block;
+    }
+    .menu {
+        display: none;
+        position: relative;
+        &__list {
+            background-color: #000;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 11;
+            flex-direction: column;
+            text-align: center;
+            padding: 25px;
+        }
+        &__link {
+            color: #fff;
+            margin: 15px 55px 15px 55px;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+
 @media screen and (max-width: 576px) {
     .modal__form {
         padding: 100px 15px;
         
+    }
+
+    .modal__close {
+        top: -61px;
+        right: 10px;
     }
     .form {
         width: 100%;
         height: 50px;
     }
 }
+

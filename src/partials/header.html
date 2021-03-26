@@ -2,8 +2,8 @@
     <div class="header__top top container">
         <h1 class="top__title"><span>Fashion</span>press</h1>
         <div class="top__menu form">
-            <button class="form__btn" id="btn-join">Join</button>
-            <button class="form__btn" id="btn-sign">Sign In</button>
+            <button class="form__btn btn-modal" id="btn-join">Join</button>
+            <button class="form__btn btn-modal" id="btn-sign">Sign In</button>
             <button class="form__btn"><span>Shopping Bag </span>(0)
                 <img src="img/header/cart.png" alt="shoping cart">
             </button>
@@ -12,22 +12,24 @@
         </div>
     </div>
     <div class="header__bottom">
-        <nav class="menu container">
-            <ul class="menu__list">
-                <li><a href="#" class="menu__link">Home</a></li>
+        <div class="overlay container btn-modal" id="menu">menu</div>
+        <nav class="menu container" id="nav">
+            <ul class="menu__list animate__animated" data-animate="backInDown">
+                <li><a href=" #" class="menu__link">Home</a></li>
                 <li><a href="#" class="menu__link">About us</a></li>
                 <li><a href="#" class="menu__link">Careers</a></li>
                 <li><a href="#" class="menu__link">Contact Us</a></li>
                 <li><a href="#" class="menu__link">Company Profile</a></li>
                 <li><a href="#" class="menu__link">Company Registration</a></li>
                 <li><a href="#" class="menu__link">Wish List</a></li>
+                <li><a href="#" class="menu__link btn__close">close</a></li>
             </ul>
         </nav>
     </div>
     <div class="modal animate__animated" id="join" data-animate="backInDown">
         <form action="" name="registration-form" class="modal__form container">
             <fieldset class="modal__fieldset">
-                <button type=" button" class="modal__close">X</button>
+                <button type=" button" class="modal__close btn__close">X</button>
                 <legend class="modal__legend">Registration form</legend>
                 <p class="modal__msg">Please fill out this form to create an account.</p>
 
@@ -54,7 +56,7 @@
     <div class="modal animate__animated" id="sign-in" data-animate="backInDown">
         <form action="" name="registration-form" class="modal__form container">
             <fieldset class="modal__fieldset">
-                <button type=" button" class="modal__close">X</button>
+                <button type=" button" class="modal__close btn__close">X</button>
                 <legend class="modal__legend">Sign in form</legend>
                 <p class="modal__msg">Please enter your email and password</p>
 

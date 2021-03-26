@@ -1,13 +1,16 @@
 (function () {
     'use strict';
 
+    let btns = document.querySelectorAll(".btn-modal");
+    let nav = document.getElementById("nav");
+    let menu = document.getElementById("menu");
     let btnJoin = document.getElementById("btn-join");
     let btnSign = document.getElementById("btn-sign");
     let modalJoin = document.getElementById("join");
     let modalSign = document.getElementById("sign-in");
     let modals = document.querySelectorAll(".modal");
     let modalBodys = document.querySelectorAll(".modal__form");
-    let modalCloses = document.querySelectorAll(".modal__close");
+    let modalCloses = document.querySelectorAll(".btn__close");
 
     function letAnimate() {
         let animates = document.querySelectorAll('.animate__animated');
@@ -21,23 +24,32 @@
 
     };
 
-    btnJoin.onclick = function () {
-        modalJoin.style.display = "block";
-        document.body.classList.toggle('overflow');
-        letAnimate();
-    }
+    btns.forEach(btn => {
+        btn.onclick = function (e) {
+            console.log(e)
+            if (btn == btnJoin) {
+                modalJoin.style.display = "block";
+            }
+            if (btn == btnSign) {
+                modalSign.style.display = "block";
+            }
+            if (btn == menu) {
+                nav.style.display = "block";
 
-    btnSign.onclick = function () {
-        modalSign.style.display = "block";
-        document.body.classList.toggle('overflow');
-        letAnimate();
-    }
+            }
+            document.body.classList.toggle('overflow');
+            letAnimate();
+
+        }
+    })
 
     modalCloses.forEach(modalClose => {
 
         modalClose.onclick = function () {
             modalJoin.style.display = "none";
             modalSign.style.display = "none";
+            nav.style.display = "none";
+
             document.body.classList.remove('overflow');
         }
     })
@@ -54,10 +66,6 @@
         })
 
     })
-
-
-
-
 
     $(document).ready(function () {
         $('.slider-hero').slick({
