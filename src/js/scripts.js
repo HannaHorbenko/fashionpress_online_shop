@@ -9,22 +9,36 @@
     let modalBodys = document.querySelectorAll(".modal__form");
     let modalCloses = document.querySelectorAll(".modal__close");
 
+    function letAnimate() {
+        let animates = document.querySelectorAll('.animate__animated');
+
+        animates.forEach(animate => {
+            let animateMode = animate.getAttribute('data-animate');
+            if (animateMode) {
+                animate.classList.add('animate__' + animateMode);
+            }
+        })
+
+    };
+
     btnJoin.onclick = function () {
         modalJoin.style.display = "block";
         document.body.classList.toggle('overflow');
+        letAnimate();
     }
+
     btnSign.onclick = function () {
         modalSign.style.display = "block";
         document.body.classList.toggle('overflow');
+        letAnimate();
     }
 
     modalCloses.forEach(modalClose => {
+
         modalClose.onclick = function () {
             modalJoin.style.display = "none";
             modalSign.style.display = "none";
             document.body.classList.remove('overflow');
-
-
         }
     })
 
@@ -40,6 +54,10 @@
         })
 
     })
+
+
+
+
 
     $(document).ready(function () {
         $('.slider-hero').slick({
