@@ -7,14 +7,14 @@ let gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require("gulp-rename"),
     clean = require('gulp-clean'),
-    rigger       = require('gulp-rigger'),
-    uglify       = require('gulp-uglify-es').default,
-    imagemin     = require('gulp-imagemin'),
-    pngquant     = require('imagemin-pngquant'),
-    zopfli       = require('imagemin-zopfli'),
-    mozjpeg      = require('imagemin-mozjpeg'),
-    giflossy     = require('imagemin-giflossy'),
-    jpegtran     = require('imagemin-jpegtran');
+    rigger = require('gulp-rigger'),
+    uglify = require('gulp-uglify-es').default,
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    zopfli = require('imagemin-zopfli'),
+    mozjpeg = require('imagemin-mozjpeg'),
+    giflossy = require('imagemin-giflossy'),
+    jpegtran = require('imagemin-jpegtran');
 
 
 gulp.task('html', () => {
@@ -77,7 +77,7 @@ gulp.task('images', () => {
                 speed: 1,
                 quality: [0.95, 1]
             }),
-            zopfli({more: true}),
+            zopfli({ more: true }),
             giflossy({
                 optimizationLevel: 3,
                 optimize: 3,

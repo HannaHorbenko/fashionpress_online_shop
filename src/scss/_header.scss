@@ -1,10 +1,12 @@
 .header {
     background-color: #fff;
+    position: relative;
 }
 
 .top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     &__title {
         font-family: $title-ff;
         text-transform: uppercase;
@@ -19,6 +21,7 @@
     background-color: #eee;
     width: 330px;
     color: $sec-color;
+    position: relative;
     &__btn {
         border: none;
         border-right: 2px solid #fff;
@@ -52,6 +55,87 @@
     }
 }
 
+.modal {
+    display: none;
+    background-color: rgba(245, 237, 237, 0.8);
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    color: #000;
+    &__close {
+        padding: 15px;
+        font-size: 2rem;
+        outline: none;
+        border: 2px solid $main-color;
+        position: absolute;
+        top: -55px;
+        right: 55px;
+        &:hover,
+        &:focus, 
+        &:active {
+            background-color: $main-color;
+            color: #fff;
+            transition: all .2s ease-in;
+        }
+    }
+    &__form {
+        padding: 100px;
+        
+    }
+    &__fieldset {
+        position: relative;
+        padding: 20px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    &__legend {
+        background-color: $main-color;
+        color: #fff;
+        padding: 20px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &__msg {
+        font-size: 2rem;
+    }
+    &__label {
+        color: $main-color;
+        font-size: 1.6rem;
+    }
+    &__input {
+        width: 50%;
+        margin: 0 0 25px 0;
+        padding: 10px;
+        outline: none;
+        &:hover,
+        &:focus, 
+        &:active {
+            border: 2px solid $main-color;
+        }
+    }
+    &__submit {
+        width: 25%;
+        margin: 15px 0;
+        padding: 15px;
+        font-size: 2rem;
+        outline: none;
+        border: 2px solid $main-color;
+        &:hover,
+        &:focus, 
+        &:active {
+            background-color: $main-color;
+            color: #fff;
+            transition: all .2s ease-in;
+        }
+    }
+    
+}
+
 .header__bottom {
     background-color: #000;
 
@@ -78,5 +162,16 @@
             color: $main-color;
             
         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal__form {
+        padding: 100px 15px;
+        
+    }
+    .form {
+        width: 100%;
+        height: 50px;
     }
 }
