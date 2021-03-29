@@ -5,6 +5,10 @@
     
 }
 
+.content-wrap {
+    min-height: 1350px;
+}
+
 .product {
     width: calc((100% / 3) - 5px * 2);
     height: 295px;
@@ -69,4 +73,25 @@
             justify-content: space-around;
         }
     }
+}
+
+@media screen and (max-width: 576px) {
+    .product {
+        width: calc((100% / 2) - 5px * 2);
+        &--lg {
+            text-align: center;
+        }
+        &__img {
+            height: 170px;
+        }
+        &__img--lg {
+            height: 170px; 
+        }
+        &__price {
+            border-right: none;
+        }
+        &__btn {
+            margin: 10px;            
+        }
+    }    
 }

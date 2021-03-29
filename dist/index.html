@@ -149,13 +149,14 @@
                     <label for="search" class="search__label">Search Product
                     </label>
                     <input type="search" id="search" class="search__input">
-                    <!-- <button type="submit" class="search__btn">
+                    <div class="search__btn">
                         <img src="img/search/search.png" alt="searching-button">
-                    </button> -->
-        
-        
+                    </div>
                 </form>
                 <div class="panel__part">
+                    <button class="view-btn btn-modal" id="btn-filter" type="button">
+                        <img src="img/search/selective.png" alt="view">
+                    </button>
                     <button class="view-btn" type="button">
                         <img src="img/search/view1.png" alt="view">
                     </button>
@@ -166,24 +167,29 @@
             </div>
         </section>
         <div class="container">
-            <aside class="aside">
+            <aside class="aside animate__animated" data-animate="fadeInLeft">
                 <div class="aside__menu">
-                    <h3 class="title">Products Menu</h3>
-                    <ul class="menu-bla">
-                        <li class="menu__item">Man </li>
-                        <li class="menu__item">Women</li>
-                        <li class="menu__item">Fashion 2021</li>
-                        <li class="menu__item">Kids</li>
-                        <li class="menu__item">Jeans </li>
-                        <li class="menu__item">Tshirt </li>
-                        <li class="menu__item">Top Fasion</li>
-                        <li class="menu__item">Summber collection</li>
-                        <li class="menu__item">Special Offer</li>
+                    <div class="wrap wrap-title">
+                        <h3 class="title">Products Menu </h3>
+                        <button class="btn__close">X</button>
+                    </div>
+                    <ul class="aside-list">
+                        <li class="aside-list__item filter">Man </li>
+                        <li class="aside-list__item filter">Women</li>
+                        <li class="aside-list__item filter">Fashion 2021</li>
+                        <li class="aside-list__item filter">Kids</li>
+                        <li class="aside-list__item filter">Jeans </li>
+                        <li class="aside-list__item filter">Tshirt </li>
+                        <li class="aside-list__item filter">Top Fasion</li>
+                        <li class="aside-list__item filter">Summer collection</li>
+                        <li class="aside-list__item filter">Special Offer</li>
                     </ul>
                 </div>
+            
                 <div class="aside__delivery">
                     <img src="img/aside/img.png" alt="delivery">
                 </div>
+            
                 <div class="aside__news news">
                     <h3 class="news__title">Latest From Twitter</h3>
                     <p class="news__comment comment">
@@ -203,6 +209,7 @@
                         <span class="comment__post">less than a minute ago</span>
                     </p>
                 </div>
+            
                 <div class="aside__feedback">
                     <h3 class="feedback__title">Our Happy Clients</h3>
                     <div class="aside__slider">
@@ -233,8 +240,10 @@
                             <div class="feedback__area">
                                 <img src="img/aside/box.png" alt="box">
                                 <p class="feedback__text">
-                                    “Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptatibus culpa vitae, at
-                                    assumenda veniam quam consequatur necessitatibus incidunt reiciendis quo voluptas unde placeat
+                                    “Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptatibus culpa vitae,
+                                    at
+                                    assumenda veniam quam consequatur necessitatibus incidunt reiciendis quo voluptas unde
+                                    placeat
                                     voluptates!
                                 </p>
                             </div>
@@ -242,11 +251,10 @@
                         </div>
                     </div>
                 </div>
-            
             </aside>
-            <section class="section">
-                <div class="wrap">
-                    <div class="product">
+            <section class="section ">
+                <div class="wrap content-wrap">
+                    <div class="product" data-attr="Kids">
                         <div class="product__img">
                             <img src="img/content/img1.jpg" alt="photo1">
                         </div>
@@ -257,7 +265,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product product--lg">
+                    <div class="product product--lg" data-attr="Fashion">
                         <div class="product__img product__img--lg">
                             <img src="img/content/img2.jpg" alt="photo2">
                         </div>
@@ -267,7 +275,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="women">
                         <div class="product__img">
                             <img src="img/content/img3.jpg" alt="photo3">
                         </div>
@@ -278,7 +286,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="man">
                         <div class="product__img">
                             <img src="img/content/img4.jpg" alt="photo4">
                         </div>
@@ -289,7 +297,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="Fashion">
                         <div class="product__img">
                             <img src="img/content/img5.jpg" alt="photo5">
                         </div>
@@ -300,7 +308,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="Summer">
                         <div class="product__img">
                             <img src="img/content/img6.jpg" alt="photo6">
                         </div>
@@ -311,7 +319,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="Summer">
                         <div class="product__img">
                             <img src="img/content/img7.jpg" alt="photo7">
                         </div>
@@ -344,7 +352,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="Top">
                         <div class="product__img">
                             <img src="img/content/img10.jpg" alt="photo10">
                         </div>
@@ -355,7 +363,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="jeans">
                         <div class="product__img">
                             <img src="img/content/img11.jpg" alt="photo11">
                         </div>
@@ -366,7 +374,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-attr="Special">
                         <div class="product__img">
                             <img src="img/content/img12.jpg" alt="photo12">
                         </div>
@@ -377,7 +385,7 @@
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product product--lg">
+                    <div class="product product--lg" data-attr="Special">
                         <div class="product__img product__img--lg">
                             <img src="img/content/img13.jpg" alt="photo13">
                         </div>

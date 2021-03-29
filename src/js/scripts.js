@@ -11,17 +11,20 @@
     let modals = document.querySelectorAll(".modal");
     let modalBodys = document.querySelectorAll(".modal__form");
     let modalCloses = document.querySelectorAll(".btn__close");
+    let btnFilter = document.querySelector('#btn-filter');
+    let aside = document.querySelector('.aside');
+
 
     function letAnimate() {
         let animates = document.querySelectorAll('.animate__animated');
 
+        console.log(animates);
         animates.forEach(animate => {
             let animateMode = animate.getAttribute('data-animate');
             if (animateMode) {
                 animate.classList.add('animate__' + animateMode);
             }
         })
-
     };
 
     btns.forEach(btn => {
@@ -37,6 +40,10 @@
                 nav.style.display = "block";
 
             }
+            if (btn == btnFilter) {
+                aside.style.display = "block";
+
+            }
             document.body.classList.toggle('overflow');
             letAnimate();
 
@@ -48,6 +55,7 @@
         modalClose.onclick = function () {
             modalJoin.style.display = "none";
             modalSign.style.display = "none";
+            aside.style.display = "none";
             nav.style.display = "none";
 
             document.body.classList.remove('overflow');
@@ -113,6 +121,22 @@
 
         }
     }
+
+    // let filters = document.querySelectorAll('.filter');
+    // filters.forEach(filter => {
+    //     filter.onclick = function () {
+    //         let items = document.getAttribute('data-attr');
+    //         console.log(items)
+    //         // items.forEach(function (elem) {
+    //         //     if (filter.innerHTML.search(elem) == -1) {
+    //         //         elem.classList.add('hide');
+    //         //     }
+    //         //     else {
+    //         //         elem.classList.remove('hide');
+    //         //     }
+    //         // })
+    //     }
+    // })
 
 
 })();

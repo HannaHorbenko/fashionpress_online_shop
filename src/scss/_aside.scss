@@ -1,7 +1,7 @@
 .aside {
     width: 265px;
-    float: left;
     margin-right: 10px;
+    float: left;
     &__menu {
         border-right: 1px solid #bebebe;
     }
@@ -15,17 +15,23 @@
 
 }
 
+.wrap-title {
+    background-color: $main-color;
+    .btn__close {
+        display: none;
+    }
+
+}
 .title {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 700;
-    background-color: $main-color;
     margin: 10px 0 0 0;
     padding: 10px 10px 10px 20px;
     text-transform: uppercase;
 }
 
-.menu-bla {
+.aside-list {
     list-style-image: url('../img/aside/style.png');
     padding-left: 30px;
     &__item {
@@ -93,4 +99,33 @@
         color: $sec-color;
         margin: 10px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .aside {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: #eee;
+        z-index: 22;
+        &__delivery {
+            display: none;
+        }
+        &__news {
+            margin: 30px 0;
+        }
+    
+    }
+    .wrap-title {
+        .btn__close {
+            display: block;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            border: 1px solid #fff;
+            width: 40px;
+        }
+    
+    }
+
 }
