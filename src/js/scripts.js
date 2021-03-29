@@ -90,4 +90,29 @@
         });
     });
 
+
+    let search = document.querySelector('#search');
+    search.oninput = function () {
+        let inputVal = this.value.trim().toLowerCase();
+        console.log(inputVal);
+        let items = document.querySelectorAll('.product');
+        console.log(items);
+        if (inputVal != '') {
+            items.forEach(function (elem) {
+                if (elem.textContent.toLowerCase().search(inputVal) == -1) {
+                    elem.classList.add('hide');
+                } else {
+                    elem.classList.remove('hide');
+                }
+            });
+        }
+        else {
+            items.forEach(function (elem) {
+                elem.classList.remove('hide');
+            });
+
+        }
+    }
+
+
 })();
