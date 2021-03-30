@@ -1,20 +1,27 @@
-.wrap {
+.content-wrap {
+    min-height: 1350px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
 }
 
-.content-wrap {
-    min-height: 1350px;
+.wrap-panel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #eee;
+    padding: 3px;
+    &--lg {
+        justify-content: space-around;
+    }
 }
-
 .product {
     width: calc((100% / 3) - 5px * 2);
     height: 295px;
     padding: 7px 5px;
     margin: 5px;
     background-color: #fff;
+    overflow: hidden;
+    transition: .5s all;
     &--lg {
         width: 65%; 
     }
@@ -65,13 +72,6 @@
         text-transform: uppercase;
         text-shadow: 1px 1px rgba(0,0,0,.3);
         border-radius: 3px;
-    }
-    .wrap {
-        border-top: 2px solid #eee;
-        padding: 3px;
-        &--lg {
-            justify-content: space-around;
-        }
     }
 }
 

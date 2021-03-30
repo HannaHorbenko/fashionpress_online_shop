@@ -100,43 +100,58 @@
 
 
     let search = document.querySelector('#search');
+    let cards = document.querySelectorAll('.product');
     search.oninput = function () {
         let inputVal = this.value.trim().toLowerCase();
-        console.log(inputVal);
-        let items = document.querySelectorAll('.product');
-        console.log(items);
         if (inputVal != '') {
-            items.forEach(function (elem) {
+            cards.forEach(function (elem) {
                 if (elem.textContent.toLowerCase().search(inputVal) == -1) {
+                    elem.classList.add('anime');
                     elem.classList.add('hide');
                 } else {
                     elem.classList.remove('hide');
+                    elem.classList.remove('anime');
                 }
             });
         }
         else {
-            items.forEach(function (elem) {
+            cards.forEach(function (elem) {
                 elem.classList.remove('hide');
+                elem.classList.remove('anime');
             });
 
         }
     }
 
-    // let filters = document.querySelectorAll('.filter');
-    // filters.forEach(filter => {
-    //     filter.onclick = function () {
-    //         let items = document.getAttribute('data-attr');
-    //         console.log(items)
-    //         // items.forEach(function (elem) {
-    //         //     if (filter.innerHTML.search(elem) == -1) {
-    //         //         elem.classList.add('hide');
-    //         //     }
-    //         //     else {
-    //         //         elem.classList.remove('hide');
-    //         //     }
-    //         // })
-    //     }
-    // })
+    let btnFilters = document.querySelectorAll('.aside-list__btn');
 
+    function filter(category, items) {
+        items.forEach((item) => {
+            const isItemFiltred = !item.classList.contains(category);
+            const isShowAll = category.toLowerCase() === 'all';
+            if (isItemFiltred && !isShowAll) {
+                item.classList.add('anime');
+            }
+            else {
+                item.classList.remove('anime');
+                item.classList.remove('hide');
+
+            }
+        })
+    }
+    btnFilters.forEach((button) => {
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter
+            filter(currentCategory, cards)
+        })
+    })
+
+    cards.forEach((card) => {
+        card.ontransitionend = function () {
+            if (card.classList.contains('anime')) {
+                card.classList.add('hide');
+            }
+        }
+    })
 
 })();

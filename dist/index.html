@@ -174,15 +174,36 @@
                         <button class="btn__close">X</button>
                     </div>
                     <ul class="aside-list">
-                        <li class="aside-list__item filter">Man </li>
-                        <li class="aside-list__item filter">Women</li>
-                        <li class="aside-list__item filter">Fashion 2021</li>
-                        <li class="aside-list__item filter">Kids</li>
-                        <li class="aside-list__item filter">Jeans </li>
-                        <li class="aside-list__item filter">Tshirt </li>
-                        <li class="aside-list__item filter">Top Fasion</li>
-                        <li class="aside-list__item filter">Summer collection</li>
-                        <li class="aside-list__item filter">Special Offer</li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="all">All</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="man">Man</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="women">Women</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="fashion">Fashion 2021</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="kids">Kids</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="jeans">Jeans</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="tshirt">Tshirt</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="top">Top Fasion</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="summer">Summer collection</button>
+                        </li>
+                        <li class="aside-list__item">
+                            <button class="aside-list__btn" data-filter="special"> Special Offer</button>
+                        </li>
                     </ul>
                 </div>
             
@@ -253,148 +274,302 @@
                 </div>
             </aside>
             <section class="section ">
-                <div class="wrap content-wrap">
-                    <div class="product" data-attr="Kids">
+                <div class="content-wrap">
+                    <div class="product kids">
                         <div class="product__img">
                             <img src="img/content/img1.jpg" alt="photo1">
                         </div>
-                        <div class="product__name">Kids Moon Colorblock
+                        <div class="product__name">Dress Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product product--lg" data-attr="Fashion">
+                    <div class="product product--lg">
                         <div class="product__img product__img--lg">
                             <img src="img/content/img2.jpg" alt="photo2">
                         </div>
-                        <div class="wrap wrap--lg">
+                        <div class="wrap-panel wrap-panel--lg">
                             <div class="product__name product__name--lg">Serax fibrepots</div>
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="women">
+                    <div class="product women">
                         <div class="product__img">
                             <img src="img/content/img3.jpg" alt="photo3">
                         </div>
                         <div class="product__name">Jacket Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="man">
+                    <div class="product man">
                         <div class="product__img">
                             <img src="img/content/img4.jpg" alt="photo4">
                         </div>
                         <div class="product__name">Jacket Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="Fashion">
+                    <div class="product fashion">
                         <div class="product__img">
                             <img src="img/content/img5.jpg" alt="photo5">
                         </div>
                         <div class="product__name">Hat Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="Summer">
+                    <div class="product summer">
                         <div class="product__img">
                             <img src="img/content/img6.jpg" alt="photo6">
                         </div>
                         <div class="product__name">Swimsuit Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="Summer">
+                    <div class="product women">
+                        <div class="product__img">
+                            <img src="img/content/img6.jpg" alt="photo6">
+                        </div>
+                        <div class="product__name">Swimsuit Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product summer">
                         <div class="product__img">
                             <img src="img/content/img7.jpg" alt="photo7">
                         </div>
                         <div class="product__name">Dress Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product women">
                         <div class="product__img">
                             <img src="img/content/img8.jpg" alt="photo8">
                         </div>
                         <div class="product__name">Glasses Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product man">
                         <div class="product__img">
                             <img src="img/content/img9.jpg" alt="photo9">
                         </div>
                         <div class="product__name">Glasses Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="Top">
+                    <div class="product top">
                         <div class="product__img">
                             <img src="img/content/img10.jpg" alt="photo10">
                         </div>
                         <div class="product__name">Hat Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="jeans">
+                    <div class="product jeans">
                         <div class="product__img">
                             <img src="img/content/img11.jpg" alt="photo11">
                         </div>
                         <div class="product__name">Glasses Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product" data-attr="Special">
+                    <div class="product special">
                         <div class="product__img">
                             <img src="img/content/img12.jpg" alt="photo12">
                         </div>
                         <div class="product__name">Blouse Moon Colorblock
                             Footed Tights</div>
-                        <div class="wrap">
+                        <div class="wrap-panel">
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
-                    <div class="product product--lg" data-attr="Special">
+                    <div class="product product--lg">
                         <div class="product__img product__img--lg">
                             <img src="img/content/img13.jpg" alt="photo13">
                         </div>
-                        <div class="wrap wrap--lg">
+                        <div class="wrap-panel wrap-panel--lg">
                             <div class="product__name product__name--lg">Glasses fibrepots</div>
                             <div class="product__price">$8.99</div>
                             <button type="button" class="product__btn">Get it</button>
                         </div>
                     </div>
+                    <div class="product kids">
+                        <div class="product__img">
+                            <img src="img/content/img1.jpg" alt="photo1">
+                        </div>
+                        <div class="product__name">Kids Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product fashion">
+                        <div class="product__img">
+                            <img src="img/content/img1.jpg" alt="photo1">
+                        </div>
+                        <div class="product__name">Kids Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product product--lg">
+                        <div class="product__img product__img--lg">
+                            <img src="img/content/img2.jpg" alt="photo2">
+                        </div>
+                        <div class="wrap-panel wrap-panel--lg">
+                            <div class="product__name product__name--lg">Serax fibrepots</div>
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product women">
+                        <div class="product__img">
+                            <img src="img/content/img3.jpg" alt="photo3">
+                        </div>
+                        <div class="product__name">Jacket Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product man">
+                        <div class="product__img">
+                            <img src="img/content/img4.jpg" alt="photo4">
+                        </div>
+                        <div class="product__name">Jacket Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product tshirt">
+                        <div class="product__img">
+                            <img src="img/content/img5.jpg" alt="photo5">
+                        </div>
+                        <div class="product__name">Hat Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product tshirt">
+                        <div class="product__img">
+                            <img src="img/content/img6.jpg" alt="photo6">
+                        </div>
+                        <div class="product__name">Swimsuit Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product kids">
+                        <div class="product__img">
+                            <img src="img/content/img7.jpg" alt="photo7">
+                        </div>
+                        <div class="product__name">Dress Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product fashion">
+                        <div class="product__img">
+                            <img src="img/content/img8.jpg" alt="photo8">
+                        </div>
+                        <div class="product__name">Glasses Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product jeans">
+                        <div class="product__img">
+                            <img src="img/content/img9.jpg" alt="photo9">
+                        </div>
+                        <div class="product__name">Glasses Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product top">
+                        <div class="product__img">
+                            <img src="img/content/img10.jpg" alt="photo10">
+                        </div>
+                        <div class="product__name">Hat Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product jeans">
+                        <div class="product__img">
+                            <img src="img/content/img11.jpg" alt="photo11">
+                        </div>
+                        <div class="product__name">Glasses Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+                    <div class="product special">
+                        <div class="product__img">
+                            <img src="img/content/img12.jpg" alt="photo12">
+                        </div>
+                        <div class="product__name">Blouse Moon Colorblock
+                            Footed Tights</div>
+                        <div class="wrap-panel">
+                            <div class="product__price">$8.99</div>
+                            <button type="button" class="product__btn">Get it</button>
+                        </div>
+                    </div>
+            
                 </div>
             </section>
 
