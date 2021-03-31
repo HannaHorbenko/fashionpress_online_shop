@@ -55,7 +55,7 @@
         modalClose.onclick = function () {
             modalJoin.style.display = "none";
             modalSign.style.display = "none";
-            aside.style.display = "none";
+            // aside.style.display = "none";
             nav.style.display = "none";
 
             document.body.classList.remove('overflow');

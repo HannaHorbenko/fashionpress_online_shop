@@ -164,8 +164,8 @@
         align-items: center;
         margin: 0;
         padding: 0;
-    height: 45px;
-    list-style: none;
+        height: 45px;
+        list-style: none;
     }
     &__link {
         display: inline-block;
@@ -180,6 +180,8 @@
             color: $main-color;
             
         }
+        
+        
     }
 }
 

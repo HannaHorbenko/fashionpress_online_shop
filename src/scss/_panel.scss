@@ -69,9 +69,15 @@
     }
 }
 
+#btn-filter {
+    display: none;
+}
+
 
 @media screen and (max-width: 576px) {
-    
+    #btn-filter {
+        display: block;
+    }
 
     .search {
         justify-content: space-between;
